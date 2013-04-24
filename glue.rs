@@ -159,4 +159,6 @@ pub fn DefineFunctionWithReserved(cx: *JSContext, obj: *JSObject,
 pub fn GetObjectJSClass(obj: *JSObject) -> *JSClass;
 pub fn js_GetErrorMessage(userRef: *libc::c_void, locale: *libc::c_char,
                           errorNumber: libc::c_uint) -> *JSErrorFormatString;
+
+pub fn GetReservedSlot(obj: JSRawObject, index: uint32_t) -> JSVal;
 }

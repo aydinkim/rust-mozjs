@@ -569,4 +569,9 @@ js_GetErrorMessage(void* userRef, char* locale, uint32_t errorNumber)
     return js_GetErrorMessage(userRef, locale, errorNumber);
 }
 
+uint64_t
+GetReservedSlot(JSRawObject obj, uint32_t index)
+{
+    return jsval_to_uint64(JS_GetReservedSlot(obj, index));
+}
 } // extern "C"
